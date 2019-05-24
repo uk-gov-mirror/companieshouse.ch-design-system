@@ -1,108 +1,35 @@
-# GOV.UK Design System
+# GOV.UK Prototype Kit · [![Greenkeeper badge](https://badges.greenkeeper.io/alphagov/govuk-prototype-kit.svg)](https://greenkeeper.io/)
 
----
-:warning: **This project is still in early development, and is not yet ready
-for production use.**
+Go to the [GOV.UK Prototype Kit site](https://govuk-prototype-kit.herokuapp.com/docs) to download the latest version and read the documentation.
 
----
+## About the Prototype Kit
 
-**One place for service teams to find styles, components and patterns for
-designing government services.**
+The Prototype Kit provides a simple way to make interactive prototypes that look like pages on GOV.UK. These prototypes can be used to show ideas to people you work with, and to do user research.
 
-## Run locally
+Read the [project principles](https://govuk-prototype-kit.herokuapp.com/docs/principles).
 
-You'll need [Git](https://help.github.com/articles/set-up-git/) and [Node.js](https://nodejs.org/en/) installed to get this project running.
+## Security
 
-Note: You will need the [active LTS (Long-term support)](https://github.com/nodejs/Release#release-schedule) Node.js version for this project (as specified in [.nvmrc](./.nvmrc))
+If you publish your prototypes online, they **must** be protected by a [username and password](https://govuk-prototype-kit.herokuapp.com/docs/publishing-on-heroku). This is to prevent members of the public finding prototypes and thinking they are real services.
 
-### Fork repository (optional)
-If you're an external contributor make sure to [fork this project first](https://help.github.com/articles/fork-a-repo/)
+You must protect user privacy at all times, even when using prototypes. Prototypes made with the kit look like GOV.UK, but do not have the same security provisions. Always make sure you are handling user data appropriately.
 
-### Clone repository
-```
-git clone git@github.com:alphagov/govuk-design-system.git # or clone your own fork
+## Installation instructions
 
-cd govuk-design-system
-```
+- [Installation guide for new users (non technical)](https://govuk-prototype-kit.herokuapp.com/docs/install/introduction)
+- [Installation guide for developers (technical)](https://govuk-prototype-kit.herokuapp.com/docs/install/developer-install-instructions)
 
-### Using nvm (optional)
-If you work across multiple Node.js projects there's a good chance they require different Node.js and npm versions.
+## Support
 
-To enable this we use [nvm (Node Version Manager)](https://github.com/creationix/nvm) to switch between versions easily.
+The GOV.UK Prototype Kit is maintained by the Government Digital Service. If you’ve got a question or need support you can:
 
-1. [install nvm](https://github.com/creationix/nvm#installation)
-2. Run `nvm install` in the project directory (this will use [.nvmrc](./.nvmrc))
+* email [govuk-design-system-support@digital.cabinet-office.gov.uk](mailto:govuk-design-system-support@digital.cabinet-office.gov.uk) 
+* [get in touch on Slack](https://ukgovernmentdigital.slack.com/messages/prototype-kit)([open in app](slack://channel?team=T04V6EBTR&amp;id=C0647LW4R)) 
+* [view known issues on GitHub](https://github.com/alphagov/govuk-prototype-kit/issues)
+        
+## Contributing
 
-### Install npm dependencies
-```
-npm install
-```
+If you’ve got an idea or suggestion you can:
 
-### Start a local server
-This will build sources, serve pages and watch for changes.
-```
-npm start
-```
-
-## Build
-Build `./src` to `./deploy/public`
-```
-npm run build
-```
-
-## Run the Sass linter
-
-We are using the [sass-lint][sass-lint] plugin to lint the Sass files in
-`source/stylesheets`. You can run the linter from command line by running:
-
-```
-npm run lint
-```
-
-[sass-lint]: https://github.com/juanfran/gulp-scss-lint
-
-## GOV.UK Frontend packages
-
-Design System consumes [GOV.UK Frontend](https://github.com/alphagov/govuk-frontend) packages via [NPM](https://www.npmjs.com/).
-These are defined in the [package.json](package.json) file.
-
----------------------
-**NOTE:**
-For the time being we are consuming private packages. To access private packages, you will first need to log in to NPM with
-
-`npm login`
-
---------------------
-
-## Automated Checks
-
-We're using [GOV.UK PaaS](https://www.cloud.service.gov.uk/) for automated checks and production deployment.
-
-When changes are pushed to GitHub [Travis][travis] will:
-
-- run the tests
-- lint the Sass stylesheets in `source/stylesheets`
-- run the `npm run build` command to ensure that the site can be generated
-
-If any of these fail, this will be reported in the GitHub status checks
-interface.
-
-[travis]: https://travis-ci.org/alphagov/govuk-design-system
-
-## Automated Deployment
-We're using Netlify to automate our deployment for development preview.
-
-### Master deploy
-The master branch is published to `govuk-design-system-preview.netlify.com`.
-
-### Branch deploy
-When a new branch is pushed to GitHub a preview website will be deployed.
-Branch deploys are published to a URL which includes the branch name as a prefix.
-
-For example, if a branch is called `staging`, it will deploy to `staging--govuk-design-system-preview.netlify.com`.
-
-### Deploy preview
-When a new pull request is raised a preview website will be deployed.
-A deploy generated from a pull request will building the site as it would be if the proposed changes were merged. Deploy Previews are published to a URL which has the prefix `deploy-preview` followed by the identifier number of the pull request.
-
-For example, pull request #137 will automatically trigger a Deploy Preview at `deploy-preview-137--govuk-design-system-preview.netlify.com`. You will also be able to access the deploy preview URL from the govuk-design-system-ci's comment.
+* [get in touch on the developer Slack channel](https://ukgovernmentdigital.slack.com/messages/prototype-kit-dev)([open in app](slack://channel?team=T04V6EBTR&amp;id=C0E1063DW))
+* [create a GitHub issue](https://github.com/alphagov/govuk-prototype-kit/issues)
